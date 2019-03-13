@@ -1,0 +1,4 @@
+[default]
+protoFile = ["greeter.proto"]
+package = "org.mvnsearch.spring.boot.reactive.grpc.demo.service"
+service = "Greeter"
