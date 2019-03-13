@@ -122,7 +122,7 @@ gRPC has different starters to integration with Spring Boot, for example:
 * https://github.com/yidongnan/grpc-spring-boot-starter
 * https://github.com/LogNet/grpc-spring-boot-starter
 
-The main difference is code style in all starters. If you like Reactive style, please choose Reactive gRPC.
+The main difference is code style in these starters. If you like Reactive style, please choose Reactive gRPC.
 If you think native style fine, please use starters above.
 
 * gRPC native style:
