@@ -1,6 +1,6 @@
 Spring Boot Starter Reactive gRPC
 =================================
-Spring Boot 2.0 starter with Reactive gRPC (https://github.com/salesforce/reactive-grpc)
+Spring Boot 2.0 starter for Reactive gRPC (https://github.com/salesforce/reactive-grpc) to bring reactive style for grpc-java.
 
 ### How to use?
 
