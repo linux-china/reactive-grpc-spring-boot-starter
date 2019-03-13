@@ -26,7 +26,7 @@ public class ReactiveGrpcAutoConfiguration {
     @Autowired
     private ReactiveGrpcProperties properties;
 
-    @Bean
+    @Bean(destroyMethod = "shutdown")
     public Server reactiveGrpcServer(@Autowired @ReactiveGrpcService List<BindableService> BindableService) throws IOException {
         ServerBuilder<?> builder = ServerBuilder.forPort(properties.getPort());
         log.info("gRPC server started on: " + properties.getPort());
