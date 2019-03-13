@@ -123,7 +123,7 @@ public void sayHello(HelloRequest req, StreamObserver<HelloReply> responseObserv
 * gRPC reactive style:
 ```
 public Mono<HelloReply> sayHello(Mono<HelloRequest> request) {
-  return request.map(helloRequest -> HelloReply.newBuilder().setMessage("Hello " + helloRequest.getName()).build());```
+  return request.map(helloRequest -> HelloReply.newBuilder().setMessage("Hello " + helloRequest.getName()).build());
 }
 ```
 
