@@ -71,8 +71,8 @@ Spring Boot 2.0 starter for Reactive gRPC (https://github.com/salesforce/reactiv
                 <executions>
                     <execution>
                         <goals>
-                            <goal>test-compile</goal>
-                            <goal>test-compile-custom</goal>
+                            <goal>compile</goal>
+                            <goal>compile-custom</goal>
                         </goals>
                     </execution>
                 </executions>
