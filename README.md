@@ -186,6 +186,14 @@ Please execute "mvn -DskipTests clean package" and run ReactiveGrpcDemoApplicati
 
 * Publish artifact to Maven repository
 * Actuator endpoint to output proto sources
+* SSL for gRPC by using certificate in Spring Boot
+
+```
+server.ssl.enabled=true
+server.ssl.key-store=${user.home}/domain_certs/localhost.com/localhost.com.p12
+server.ssl.key-store-type=PKCS12
+server.ssl.key-store-password=changeit
+```
 
 ### References
 
