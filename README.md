@@ -27,7 +27,7 @@ $ mvn -P release -DskipTests clean install
 </project>
 ```
 
-* Add protobuf-maven-plugin with Reactor-gRPC protocPlugin included.
+* Add protobuf-maven-plugin with Reactor-gRPC protocPlugin included. **Attention:** proto files should be in "src/main/proto" directory
 
 ```xml
 <build>
@@ -103,7 +103,7 @@ public class ReactiveGreeterImpl extends ReactorGreeterGrpc.GreeterImplBase {
 * Start you Spring application and use Evans to test service
 
 ```
-$ evans src/test/proto/greeter.proto
+$ evans src/main/proto/greeter.proto
 ```
 
 ### Reactive gRPC configuration
