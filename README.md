@@ -127,6 +127,10 @@ public Mono<HelloReply> sayHello(Mono<HelloRequest> request) {
 }
 ```
 
+#### Convert between DDD model and Protobuf message
+
+Please refer MapStruct to map DDD model and Protobuf message.
+
 ### Todo
 
 * Actuator endpoint to output proto sources
@@ -136,4 +140,4 @@ public Mono<HelloReply> sayHello(Mono<HelloRequest> request) {
 * Reactive gRPC: https://github.com/salesforce/reactive-grpc
 * Project Reactor: https://projectreactor.io/
 * Evans: expressive universal gRPC client https://github.com/ktr0731/evans
-
+* MapStruct: http://mapstruct.org/
