@@ -4,6 +4,14 @@ Spring Boot 2.0 starter for Reactive gRPC (https://github.com/salesforce/reactiv
 
 ### How to use?
 
+* Please clone the repository and install reactive-grpc-spring-boot-starter artifact to your local Maven repository. 
+
+```
+$ git clone git@github.com:linux-china/reactive-grpc-spring-boot-starter.git
+$ cd reactive-grpc-spring-boot-starter
+$ mvn -P release -DskipTests clean install
+```
+
 * Add dependency and repository in your pom.xml. Now reactive-grpc-spring-boot-starter hosted by jitpack
 ```xml
 <project>
@@ -12,16 +20,9 @@ Spring Boot 2.0 starter for Reactive gRPC (https://github.com/salesforce/reactiv
      <dependency>
         <groupId>com.github.linux-china</groupId>
         <artifactId>reactive-grpc-spring-boot-starter</artifactId>
-        <version>1.0.0-SNAPSHOT</version>
+        <version>0.0.1</version>
      </dependency>
  </dependencies>
- ...
- <repositories>
- 	<repository>
- 	    <id>jitpack.io</id>
- 	    <url>https://jitpack.io</url>
- 	</repository>
- </repositories>
  
 </project>
 ```
@@ -147,6 +148,7 @@ Please refer MapStruct to map DDD model and Protobuf message, and MapStruct 1.3 
 
 ### Todo
 
+* Publish artifact to Maven repository
 * Actuator endpoint to output proto sources
 
 ### References
