@@ -94,7 +94,7 @@ $ evans src/test/proto/greeter.proto
 
 ### Reactive gRPC configuration
 You don't need to setup anything for Reactive gRPC service.
-If you want to change listen port(default is 50051), please change as following:
+If you want to change listen port(default is 50051), please change as following in application.properties:
 
 ```properties
 grpc.reactive.port=50051
