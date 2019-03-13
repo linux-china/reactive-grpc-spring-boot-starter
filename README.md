@@ -4,16 +4,29 @@ Spring Boot 2.0 starter for Reactive gRPC (https://github.com/salesforce/reactiv
 
 ### How to use?
 
-* Add dependency in your pom.xml
+* Add dependency and repository in your pom.xml. Now reactive-grpc-spring-boot-starter hosted by jitpack
 ```xml
- <dependency>
-        <groupId>org.mvnsearch.spring.boot</groupId>
-        <artifactId>reactive-grpc-spring-boot-starter</artifactId>
-        <version>1.0.0-SNAPSHOT</version>
- </dependency>
+<project>
+ ...
+ <dependencies>
+     <dependency>
+            <groupId>com.github.linux-china</groupId>
+            <artifactId>reactive-grpc-spring-boot-starter</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+     </dependency>
+ </dependencies>
+ ...
+ <repositories>
+ 		<repository>
+ 		    <id>jitpack.io</id>
+ 		    <url>https://jitpack.io</url>
+ 		</repository>
+ </repositories>
+ 
+</project>
 ```
 
-* add protobuf-maven-plugin with Reactor-gRPC plugin support
+* Add protobuf-maven-plugin with Reactor-gRPC protocPlugin included.
 
 ```xml
 <build>
@@ -68,7 +81,7 @@ Spring Boot 2.0 starter for Reactive gRPC (https://github.com/salesforce/reactiv
 </build>
 ```
 
-* Implement Reactive Service with @ReactiveGrpcService support
+* Implement Reactive Service with @ReactiveGrpcService annotation.
 
 ```java
 @Service
@@ -86,7 +99,7 @@ public class ReactiveGreeterImpl extends ReactorGreeterGrpc.GreeterImplBase {
 }
 ```
 
-* Start you Spring application and use evans to test service
+* Start you Spring application and use Evans to test service
 
 ```
 $ evans src/test/proto/greeter.proto
@@ -104,12 +117,13 @@ grpc.reactive.port=50051
 
 #### What's difference with gRPC Spring Boot Starter
 
-gRPC has starters to integration with Spring Boot, for example:
+gRPC has different starters to integration with Spring Boot, for example:
 
 * https://github.com/yidongnan/grpc-spring-boot-starter
 * https://github.com/LogNet/grpc-spring-boot-starter
 
-The main difference is code style. If you like Reactive style, please choose Reactive gRPC. If you think native style is fine, please use starters above.
+The main difference is code style in all starters. If you like Reactive style, please choose Reactive gRPC.
+If you think native style fine, please use starters above.
 
 * gRPC native style:
 ```
@@ -127,9 +141,9 @@ public Mono<HelloReply> sayHello(Mono<HelloRequest> request) {
 }
 ```
 
-#### Convert between DDD model and Protobuf message
+#### Convert between DDD model(entity,value object) and Protobuf message
 
-Please refer MapStruct to map DDD model and Protobuf message.
+Please refer MapStruct to map DDD model and Protobuf message, and MapStruct 1.3 with Protobuf builder support.
 
 ### Todo
 
