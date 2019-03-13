@@ -100,7 +100,15 @@ public class ReactiveGreeterImpl extends ReactorGreeterGrpc.GreeterImplBase {
 }
 ```
 
-* Start you Spring application and use Evans to test service
+* Start you Spring application and you will get following output on your console.
+
+```
+09:40:17.366 [INFO ] o.m.s.b.r.g.ReactiveGrpcAutoConfiguration - gRPC server started on: 50051
+09:40:17.379 [INFO ] o.m.s.b.r.g.ReactiveGrpcAutoConfiguration - Reactive gRPC service exposed: org.mvnsearch.spring.boot.reactive.grpc.demo.ReactiveGreeterImpl
+
+```
+
+* Use Evans to test gRPC service
 
 ```
 $ evans src/main/proto/greeter.proto
@@ -145,6 +153,10 @@ public Mono<HelloReply> sayHello(Mono<HelloRequest> request) {
 #### Convert between DDD model(entity,value object) and Protobuf message
 
 Please refer MapStruct to map DDD model and Protobuf message, and MapStruct 1.3 with Protobuf builder support.
+
+#### Quick test
+
+Please execute "mvn -DskipTests clean package" and run ReactiveGrpcDemoApplication
 
 ### Todo
 
