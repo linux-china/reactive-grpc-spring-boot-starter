@@ -136,18 +136,42 @@ If you think native style fine, please use starters above.
 
 * gRPC native style:
 ```
+//server side
 public void sayHello(HelloRequest req, StreamObserver<HelloReply> responseObserver) {
   HelloReply reply = HelloReply.newBuilder().setMessage("Hello ==> " + req.getName()).build();
   responseObserver.onNext(reply);
   responseObserver.onCompleted();
 }
+//client side
+ asyncStub.sayHello(HelloRequest.newBuilder().setName(name).build(), new StreamObserver<HelloReply>() {
+            @Override
+            public void onNext(HelloReply reply) {
+                
+            }
+
+            @Override
+            public void onError(Throwable throwable) {
+
+            }
+
+            @Override
+            public void onCompleted() {
+
+            }
+        });
 ```
 
 * gRPC reactive style:
 ```
+//server side
 public Mono<HelloReply> sayHello(Mono<HelloRequest> request) {
   return request.map(helloRequest -> HelloReply.newBuilder().setMessage("Hello " + helloRequest.getName()).build());
 }
+//client side
+ Mono<HelloRequest> request = Mono.just(HelloRequest.newBuilder().setName("Jack").build());
+ request.as(greeter::sayHello)
+         .map(HelloReply::getMessage)
+         .subscribe(System.out::println);
 ```
 
 #### Convert between DDD model(entity,value object) and Protobuf message
