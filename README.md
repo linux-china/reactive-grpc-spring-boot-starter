@@ -20,7 +20,7 @@ $ mvn -P release -DskipTests clean install
      <dependency>
         <groupId>com.github.linux-china</groupId>
         <artifactId>reactive-grpc-spring-boot-starter</artifactId>
-        <version>0.0.1</version>
+        <version>1.0.0-SNAPSHOT</version>
      </dependency>
  </dependencies>
  
