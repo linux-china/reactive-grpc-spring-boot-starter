@@ -10,17 +10,17 @@ Spring Boot 2.0 starter for Reactive gRPC (https://github.com/salesforce/reactiv
  ...
  <dependencies>
      <dependency>
-            <groupId>com.github.linux-china</groupId>
-            <artifactId>reactive-grpc-spring-boot-starter</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
+        <groupId>com.github.linux-china</groupId>
+        <artifactId>reactive-grpc-spring-boot-starter</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
      </dependency>
  </dependencies>
  ...
  <repositories>
- 		<repository>
- 		    <id>jitpack.io</id>
- 		    <url>https://jitpack.io</url>
- 		</repository>
+ 	<repository>
+ 	    <id>jitpack.io</id>
+ 	    <url>https://jitpack.io</url>
+ 	</repository>
  </repositories>
  
 </project>
